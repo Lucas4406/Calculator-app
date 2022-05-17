@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+    <script src="render.js" defer></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="title-bar">
+      <div class="title-img">
+        <img class="calc-icon" src="data:image/png;base64,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">
+      </div>
+      <span>Calculator</span>
+    </div>
+    <!-- <div class="settings-div">
+      <button class="settings" id="settinsBtn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ic_settings_48px.svg/2048px-Ic_settings_48px.svg.png" class="poza">
+      </button>
+      <button data-dev-button class="dev-tool">Dev Tools</button>
+    </div> -->
+    <div class="buttons">
+      <button id="toggle-dark-mode" class="dark-mode"><img src="icons/dark-mode.webp" style="width:100%"></button>
+    </div>
+    <div class="calculator-grid">
+        <div class="output">
+            <div class="previous-operand" data-previous-operand></div>
+            <div class="current-operand" data-current-operand></div>
+        </div>
+        <button class="span-two" data-all-clear>AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>÷</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button class="span-two" data-equals>=</button>
+    </div>
+  </body>
+</html>
