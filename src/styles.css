@@ -51,7 +51,7 @@ body{
 }
 .title-bar{
     width:100%;
-    height:31px;
+    height:40px;
     background-color: #FFFFFF;
     font-size:1rem;
     color:#00AAFF;
@@ -70,7 +70,7 @@ body{
     width:100%;
 }
 .calc-icon{
-    height:31px;
+    height:40px;
 }
 
 .settings-div{
@@ -81,7 +81,7 @@ body{
     flex-direction: column;
 }
 .dev-tool{
-    height:31px;
+    height:40px;
     width:100px;
     outline:0;
     background-color: #FFFFFF;
@@ -114,7 +114,7 @@ body{
     }
     .title-bar{
         width:100%;
-        height:31px;
+        height:40px;
         background-color: #FFFFFF;
         font-size:1rem;
         color:#333;
@@ -143,4 +143,44 @@ body{
     position: absolute;
     bottom:0;
     left:0;
+}
+
+
+
+
+.button-div{
+    display:flex;
+    position:absolute;
+    right:0;
+    justify-items: center;
+    align-items: center;
+}
+.minimize-button{
+    width:40px;
+    height:40px;
+    font-size: 30px;
+    font-weight: lighter;
+    background-color: #FFFFFF;
+    border:none;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+.maximize-button{
+    width:40px;
+    height:40px;
+    background-color: #FFFFFF;
+    border:none;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+.close-button{
+    width:40px;
+    height: 40px;
+    font-size:25px;
+    background-color: #FFFFFF;
+    border:none;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+    padding:0;
+    margin-bottom:1px;
 }
