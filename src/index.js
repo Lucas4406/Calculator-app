@@ -2,8 +2,8 @@ const { app, BrowserWindow, Menu, ipcMain, nativeTheme} = require('electron');
 const path = require('path');
 const url = require('url');
 const { Tray, nativeImage } = require('electron')
-icon = nativeImage.createFromPath(path.join(__dirname, 'icons', 'icon.ico'));
-process.env.NODE_ENV='develop';
+icon = nativeImage.createFromPath(path.join(__dirname, 'icons', 'iconita.ico'));
+process.env.NODE_ENV='production';
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -17,12 +17,7 @@ function createWindow(){
   mainWindow=new BrowserWindow({
     width: 650,
     height: 800,
-    icon: 'src/icons/icon.ico',
-    /* titleBarStyle:'hidden',
-    titleBarOverlay: {
-      color: '#FFFFFF',
-      symbolColor: '#00FF6C',
-    }, */
+    icon: 'src/icons/iconita.ico',
     frame:false,
     webPreferences:{
       preload: path.join(__dirname, 'backend', 'preload.js'),
@@ -46,12 +41,8 @@ function createPublicWindow(){
   mainWindow=new BrowserWindow({
     width: 650,
     height: 800,
-    icon: 'src/icons/icon.ico',
-    titleBarStyle:'hidden',
-    titleBarOverlay: {
-      color: '#FFFFFF',
-      symbolColor: '#00FF6C',
-    },
+    icon: 'src/icons/iconita.ico',
+    frame:false,
     webPreferences:{
       preload: path.join(__dirname, 'backend', 'preload.js'),
       devTools: false,
