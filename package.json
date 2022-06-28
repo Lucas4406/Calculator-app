@@ -4,7 +4,7 @@
   "version": "1.0.4",
   "description": "un mic proiect",
   "main": "src/index.js",
-  "icon": "src/icons/icon.ico",
+  "icon": "src/icons/iconita.ico",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -19,13 +19,15 @@
   "build": {
     "appId": "Calculator",
     "win": {
-      "target": ["nsis"],
-      "icon": "src/icons/icon.ico"
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/icons/iconita.ico"
     },
     "nsis": {
       "oneClick": false,
-      "installerIcon": "src/icons/icon.ico",
-      "uninstallerIcon": "src/icons/icon.ico",
+      "installerIcon": "src/icons/iconita.ico",
+      "uninstallerIcon": "src/icons/iconita.ico",
       "uninstallDisplayName": "Calculator-uninstaller",
       "license": "src/license.md",
       "allowToChangeInstallationDirectory": true
@@ -34,8 +36,19 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "src/icons/icon.ico"
+        "icon": "src/icons/iconita.ico"
       },
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "Lucas4406",
+              "name": "my-new-app"
+            }
+          }
+        }
+      ],
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
@@ -69,6 +82,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.63",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "@electron-forge/publisher-github": "^6.0.0-beta.64",
     "electron": "18.2.3",
     "electron-builder": "^23.0.3"
   }
