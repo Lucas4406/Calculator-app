@@ -3,7 +3,7 @@ const path = require('path');
 const url = require('url');
 const { Tray, nativeImage } = require('electron')
 icon = nativeImage.createFromPath(path.join(__dirname, 'icons', 'iconita.ico'));
-process.env.NODE_ENV='develop';
+process.env.NODE_ENV='production';
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -18,11 +18,6 @@ function createWindow(){
     width: 650,
     height: 800,
     icon: 'src/icons/iconita.ico',
-    /* titleBarStyle:'hidden',
-    titleBarOverlay: {
-      color: '#FFFFFF',
-      symbolColor: '#00FF6C',
-    }, */
     frame:false,
     webPreferences:{
       preload: path.join(__dirname, 'backend', 'preload.js'),
@@ -47,11 +42,7 @@ function createPublicWindow(){
     width: 650,
     height: 800,
     icon: 'src/icons/iconita.ico',
-    titleBarStyle:'hidden',
-    titleBarOverlay: {
-      color: '#FFFFFF',
-      symbolColor: '#00FF6C',
-    },
+    frame:false,
     webPreferences:{
       preload: path.join(__dirname, 'backend', 'preload.js'),
       devTools: false,
