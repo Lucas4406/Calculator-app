@@ -136,16 +136,11 @@ document.getElementById('toggle-dark-mode').addEventListener('click', async()=>{
 
 const closeBtn = document.getElementById("close-button")
 const minBtn = document.getElementById("minimize-button")
-const maxBtn = document. getElementById("maximize-button")
 closeBtn.addEventListener("click" , closeApp)
 minBtn.addEventListener("click", minApp)
-maxBtn.addEventListener("click" , maxApp)
 function closeApp(){
     app.window.close()
 }
 function minApp(){
     app.window.minimize()
-}
-function maxApp(){
-    app.window.maximize()
 }

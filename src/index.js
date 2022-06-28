@@ -75,9 +75,6 @@ function createPublicWindow(){
 ipcMain.on("app/close", ()=>{
   app.quit()
 })
-ipcMain.on("app/maximize", ()=>{
-  mainWindow.maximize()
-})
 ipcMain.on("app/minimize", ()=>{
   mainWindow.minimize()
 })
