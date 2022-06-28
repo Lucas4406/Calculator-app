@@ -11,7 +11,8 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "build": "electron-builder"
+    "build": "electron-builder",
+    "release": "electron-builder"
   },
   "keywords": [],
   "author": "Lucas",
