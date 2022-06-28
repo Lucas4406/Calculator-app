@@ -2,8 +2,8 @@ const { app, BrowserWindow, Menu, ipcMain, nativeTheme} = require('electron');
 const path = require('path');
 const url = require('url');
 const { Tray, nativeImage } = require('electron')
-icon = nativeImage.createFromPath(path.join(__dirname, 'icons', 'calc-icon.ico'));
-process.env.NODE_ENV='production';
+icon = nativeImage.createFromPath(path.join(__dirname, 'icons', 'icon.ico'));
+process.env.NODE_ENV='develop';
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -17,12 +17,13 @@ function createWindow(){
   mainWindow=new BrowserWindow({
     width: 650,
     height: 800,
-    icon: 'src/icons/calc-icon.ico',
-    titleBarStyle:'hidden',
+    icon: 'src/icons/icon.ico',
+    /* titleBarStyle:'hidden',
     titleBarOverlay: {
       color: '#FFFFFF',
       symbolColor: '#00FF6C',
-    },
+    }, */
+    frame:false,
     webPreferences:{
       preload: path.join(__dirname, 'backend', 'preload.js'),
     },
@@ -39,17 +40,13 @@ function createWindow(){
     }
     return nativeTheme.shouldUseDarkColors
   })
-
-  /* ipcMain.handle('dark-mode:system', () => {
-    nativeTheme.themeSource = 'system'
-  }) */
 }
 
 function createPublicWindow(){
   mainWindow=new BrowserWindow({
     width: 650,
     height: 800,
-    icon: 'src/icons/calc-icon.ico',
+    icon: 'src/icons/icon.ico',
     titleBarStyle:'hidden',
     titleBarOverlay: {
       color: '#FFFFFF',
@@ -73,6 +70,17 @@ function createPublicWindow(){
     return nativeTheme.shouldUseDarkColors
   })
 }
+
+
+ipcMain.on("app/close", ()=>{
+  app.quit()
+})
+ipcMain.on("app/minimize", ()=>{
+  mainWindow.minimize()
+})
+
+
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

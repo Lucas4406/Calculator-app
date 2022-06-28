@@ -1,10 +1,10 @@
 {
   "name": "calculator",
   "productName": "calculator-app",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "un mic proiect",
   "main": "src/index.js",
-  "icon": "src/icons/calc-icon.ico",
+  "icon": "src/icons/icon.ico",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -20,12 +20,12 @@
     "appId": "Calculator",
     "win": {
       "target": ["nsis"],
-      "icon": "src/icons/calc-icon.ico"
+      "icon": "src/icons/icon.ico"
     },
     "nsis": {
       "oneClick": false,
-      "installerIcon": "src/icons/calc-icon.ico",
-      "uninstallerIcon": "src/icons/calc-icon.ico",
+      "installerIcon": "src/icons/icon.ico",
+      "uninstallerIcon": "src/icons/icon.ico",
       "uninstallDisplayName": "Calculator-uninstaller",
       "license": "src/license.md",
       "allowToChangeInstallationDirectory": true
@@ -34,7 +34,7 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "src/icons/calc-icon.ico"
+        "icon": "src/icons/icon.ico"
       },
       "makers": [
         {

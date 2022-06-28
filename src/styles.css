@@ -51,7 +51,7 @@ body{
 }
 .title-bar{
     width:100%;
-    height:31px;
+    height:40px;
     background-color: #FFFFFF;
     font-size:1rem;
     color:#00AAFF;
@@ -70,18 +70,10 @@ body{
     width:100%;
 }
 .calc-icon{
-    height:31px;
-}
-
-.settings-div{
-    position:absolute;
-    bottom:0;
-    left:0;
-    display:flex;
-    flex-direction: column;
+    height:40px;
 }
 .dev-tool{
-    height:31px;
+    height:40px;
     width:100px;
     outline:0;
     background-color: #FFFFFF;
@@ -91,41 +83,6 @@ body{
     font-size:15px;
     padding:0;
 }
-
-
-
-
-@media (prefers-color-scheme: light) {
-    body { background: linear-gradient(to right, #00AAFF, #00FF6C); }
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    body { background: #333; }
-    .calculator-grid button{
-        cursor:pointer;
-        font-size:2rem;
-        border:1px solid white;
-        outline:none;
-        background-color:rgba(0,0,0,.9);
-        color:white;
-    }
-    .calculator-grid button:hover{
-        background-color:rgba(46, 43, 43, 0.75);
-    }
-    .title-bar{
-        width:100%;
-        height:31px;
-        background-color: #FFFFFF;
-        font-size:1rem;
-        color:#333;
-        justify-content: start;
-        align-items: center;
-        padding-left:0;
-        -webkit-app-region: drag;
-        display:flex;
-    }
-  }
-
 
 .dark-mode{
     height:50px;
@@ -144,3 +101,94 @@ body{
     bottom:0;
     left:0;
 }
+
+
+
+
+.button-div{
+    display:flex;
+    position:absolute;
+    right:0;
+    justify-items: center;
+    align-items: center;
+}
+.minimize-button{
+    width:40px;
+    height:40px;
+    font-size: 30px;
+    font-weight: lighter;
+    background-color: #FFFFFF;
+    border:none;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+.minimize-button:hover{
+    background-color: red;
+    color:#FFFFFF;
+}
+.close-button:hover{
+    background-color: red;
+    color: #FFFFFF;
+}
+.close-button{
+    width:40px;
+    height: 40px;
+    font-size:25px;
+    background-color: #FFFFFF;
+    border:none;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+    padding:0;
+    margin-bottom:1px;
+}
+.settings-div{
+    width:40px;
+    height: 40px;
+}
+
+
+@media (prefers-color-scheme: light) {
+    body { 
+        background: linear-gradient(to right, #00AAFF, #00FF6C); 
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body { background: #333; }
+    .calculator-grid button{
+        cursor:pointer;
+        font-size:2rem;
+        border:1px solid white;
+        outline:none;
+        background-color:rgba(0,0,0,.9);
+        color:white;
+    }
+    .calculator-grid button:hover{
+        background-color:rgba(46, 43, 43, 0.75);
+    }
+    .title-bar{
+        background-color: #333;
+        color:#FFFFFF;
+    }
+    .minimize-button{
+        background-color: #333;
+        color:#FFFFFF;
+    }
+    .minimize-button:hover{
+        background-color: #FFFFFF;
+        color: #333;
+    }
+    .close-button{
+        background-color: #333;
+        color:#FFFFFF;
+    }
+    .close-button:hover{
+        background-color: #FFFFFF;
+        color: #333;
+    }
+    .button-div{
+        color:#FFFFFF;
+    }
+  }
+
+
