@@ -4,15 +4,14 @@
   "version": "1.0.4",
   "description": "un mic proiect",
   "main": "src/index.js",
-  "icon": "src/icons/icon.ico",
+  "icon": "src/icons/iconita.ico",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "build": "electron-builder",
-    "release": "electron-builder"
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": "Lucas",
@@ -21,12 +20,12 @@
     "appId": "Calculator",
     "win": {
       "target": ["nsis"],
-      "icon": "src/icons/icon.ico"
+      "icon": "src/icons/iconita.ico"
     },
     "nsis": {
       "oneClick": false,
-      "installerIcon": "src/icons/icon.ico",
-      "uninstallerIcon": "src/icons/icon.ico",
+      "installerIcon": "src/icons/iconita.ico",
+      "uninstallerIcon": "src/icons/iconita.ico",
       "uninstallDisplayName": "Calculator-uninstaller",
       "license": "src/license.md",
       "allowToChangeInstallationDirectory": true
@@ -35,7 +34,7 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "src/icons/icon.ico"
+        "icon": "src/icons/iconita.ico"
       },
       "makers": [
         {

@@ -2,7 +2,7 @@ const { app, BrowserWindow, Menu, ipcMain, nativeTheme} = require('electron');
 const path = require('path');
 const url = require('url');
 const { Tray, nativeImage } = require('electron')
-icon = nativeImage.createFromPath(path.join(__dirname, 'icons', 'icon.ico'));
+icon = nativeImage.createFromPath(path.join(__dirname, 'icons', 'iconita.ico'));
 process.env.NODE_ENV='develop';
 
 
@@ -17,7 +17,7 @@ function createWindow(){
   mainWindow=new BrowserWindow({
     width: 650,
     height: 800,
-    icon: 'src/icons/icon.ico',
+    icon: 'src/icons/iconita.ico',
     /* titleBarStyle:'hidden',
     titleBarOverlay: {
       color: '#FFFFFF',
@@ -46,7 +46,7 @@ function createPublicWindow(){
   mainWindow=new BrowserWindow({
     width: 650,
     height: 800,
-    icon: 'src/icons/icon.ico',
+    icon: 'src/icons/iconita.ico',
     titleBarStyle:'hidden',
     titleBarOverlay: {
       color: '#FFFFFF',
