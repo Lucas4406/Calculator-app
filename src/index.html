@@ -8,26 +8,28 @@
     <title>Calculator</title>
   </head>
   <body>
-    <div class="title-bar">
-      <div class="title-img">
-        <img class="calc-icon" src="icons/new-icon.png">
+    <header>
+      <div class="title-bar">
+        <div class="title-img">
+          <img class="calc-icon" src="icons/new-icon.png">
+        </div>
+        <span>Calculator</span>
+        <div class="button-div">
+          <button class="minimize-button" id="minimize-button">
+            -
+          </button>
+          <button class="close-button" id="close-button">
+            x
+          </button>
+        </div>
       </div>
-      <span>Calculator</span>
-      <div class="button-div">
-        <button class="minimize-button" id="minimize-button">
-          -
-        </button>
-        <button class="close-button" id="close-button">
-          x
+      <div class="buttons">
+        <button id="toggle-dark-mode" class="dark-mode"><img src="icons/dark-mode.webp" style="width:100%"></button>
+        <button class="settings" id="settingsBtn">
+          Setari
         </button>
       </div>
-    </div>
-    <div class="buttons">
-      <button id="toggle-dark-mode" class="dark-mode"><img src="icons/dark-mode.webp" style="width:100%"></button>
-      <button class="settings" id="settingsBtn">
-        Setari
-      </button>
-    </div>
+    </header>
     <div class="calculator-grid">
         <div class="output">
             <div class="previous-operand" data-previous-operand></div>
