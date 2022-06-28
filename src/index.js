@@ -26,6 +26,7 @@ function createWindow(){
     frame:false,
     webPreferences:{
       preload: path.join(__dirname, 'backend', 'preload.js'),
+      nodeIntegration: true,
     },
   })
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
@@ -40,10 +41,6 @@ function createWindow(){
     }
     return nativeTheme.shouldUseDarkColors
   })
-
-  /* ipcMain.handle('dark-mode:system', () => {
-    nativeTheme.themeSource = 'system'
-  }) */
 }
 
 function createPublicWindow(){
@@ -59,6 +56,7 @@ function createPublicWindow(){
     webPreferences:{
       preload: path.join(__dirname, 'backend', 'preload.js'),
       devTools: false,
+      nodeIntegration: true,
     },
   })
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
