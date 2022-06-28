@@ -3,11 +3,33 @@
   <head>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
     <script src="index.js" defer></script>
-    <script src="settings.js" defer></script>
+    <script src="render.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="settings.css">
     <title>Settings</title>
   </head>
   <body>
-      Hello World
+    <header>
+      <div class="title-bar">
+        <div class="title-img">
+          <img class="calc-icon" src="icons/new-icon.png">
+        </div>
+        <span>Calculator</span>
+        <div class="button-div">
+          <button class="minimize-button" id="minimize-button">
+            -
+          </button>
+          <button class="close-button" id="close-button">
+            x
+          </button>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="toggle-dark-mode" class="dark-mode"><img src="icons/dark-mode.webp" style="width:100%"></button>
+        <button class="settings" id="homeButton">
+          Setari
+        </button>
+      </div>
+    </header>
   </body>
 </html>
