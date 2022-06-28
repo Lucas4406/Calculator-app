@@ -16,10 +16,6 @@
   "keywords": [],
   "author": "Lucas",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Lucas4406/my-new-app.git"
-  },
   "build": {
     "appId": "Calculator",
     "win": {
