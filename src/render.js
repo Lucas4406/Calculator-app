@@ -144,3 +144,12 @@ function closeApp(){
 function minApp(){
     app.window.minimize()
 }
+
+const settingsBtn = document.getElementById("settingsBtn")
+settingsBtn.addEventListener("click", ()=>{
+    window.location.assign("settings.html")
+})
+const homeBtn = document.getElementById("homeButton")
+homeBtn.addEventListener("click", ()=>{
+    window.location.assign("index.html")
+})
