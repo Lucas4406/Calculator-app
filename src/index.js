@@ -26,7 +26,6 @@ function createWindow(){
     frame:false,
     webPreferences:{
       preload: path.join(__dirname, 'backend', 'preload.js'),
-      nodeIntegration: true,
     },
   })
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
@@ -56,7 +55,6 @@ function createPublicWindow(){
     webPreferences:{
       preload: path.join(__dirname, 'backend', 'preload.js'),
       devTools: false,
-      nodeIntegration: true,
     },
   })
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
@@ -72,6 +70,20 @@ function createPublicWindow(){
     return nativeTheme.shouldUseDarkColors
   })
 }
+
+
+ipcMain.on("app/close", ()=>{
+  app.quit()
+})
+ipcMain.on("app/maximize", ()=>{
+  mainWindow.maximize()
+})
+ipcMain.on("app/minimize", ()=>{
+  mainWindow.minimize()
+})
+
+
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
