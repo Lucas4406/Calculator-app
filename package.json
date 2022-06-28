@@ -1,7 +1,7 @@
 {
   "name": "calculator",
   "productName": "Calculator-app",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "un mic proiect",
   "main": "src/index.js",
   "icon": "src/icons/iconita.ico",
