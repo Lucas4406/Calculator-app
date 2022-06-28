@@ -1,7 +1,7 @@
 {
   "name": "calculator",
   "productName": "Calculator-app",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "un mic proiect",
   "main": "src/index.js",
   "icon": "src/icons/iconita.ico",
@@ -16,6 +16,10 @@
   "keywords": [],
   "author": "Lucas",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lucas4406/my-new-app.git"
+  },
   "build": {
     "appId": "Calculator",
     "win": {
@@ -23,6 +27,10 @@
         "nsis"
       ],
       "icon": "src/icons/iconita.ico"
+    },
+    "publish": {
+      "provider": "github",
+      "repository": "https://github.com/Lucas4406/my-new-app.git"
     },
     "nsis": {
       "oneClick": false,
