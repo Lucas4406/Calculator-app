@@ -1,7 +1,7 @@
 {
   "name": "calculator",
   "productName": "Calculator-app",
-  "version": "1.0.5",
+  "version": "0.1.1",
   "description": "un mic proiect",
   "main": "src/index.js",
   "icon": "src/icons/iconita.ico",
@@ -11,18 +11,28 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "build": "electron-builder"
+    "build": "electron-builder",
+    "deploy": "electron-builder build --publish always"
   },
   "keywords": [],
   "author": "Lucas",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lucas4406/my-new-app.git"
+  },
   "build": {
     "appId": "Calculator",
     "win": {
+      "publish": ["github"],
       "target": [
         "nsis"
       ],
       "icon": "src/icons/iconita.ico"
+    },
+    "publish": {
+      "provider": "github",
+      "vPrefixedTagName": true
     },
     "nsis": {
       "oneClick": false,
