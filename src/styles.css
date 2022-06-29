@@ -6,7 +6,6 @@
 body{
     padding:0;
     margin:0;
-    /* background:linear-gradient(to right, #00AAFF, #00FF6C); */
     overflow:hidden;
 }
 .calculator-grid{
@@ -49,6 +48,9 @@ body{
     color:white;
     font-size: 2.5rem;
 }
+
+
+
 .title-bar{
     width:100%;
     height:40px;
@@ -69,32 +71,13 @@ body{
 .poza-setari{
     width:100%;
 }
-.poza{
-    width:100%;
-}
 .calc-icon{
     height:40px;
 }
-.dev-tool{
-    height:40px;
-    width:100px;
-    outline:0;
-    background-color: #FFFFFF;
-    border:none;
-    cursor: pointer;
-    color: red;
-    font-size:15px;
-    padding:0;
-}
-
 .dark-mode{
     height:50px;
     width:50px;
     cursor: pointer;
-}
-.reset-btn{
-    width:50px;
-    cursor:pointer;
 }
 .buttons{
     display:flex;
