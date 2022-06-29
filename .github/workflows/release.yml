@@ -27,7 +27,7 @@ jobs:
           npm version patch
           git commit -m "release [skip ci]" --amend
       - name: electron builder build and publish
-        run: npm run release:win
+        run: npm run deploy
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
