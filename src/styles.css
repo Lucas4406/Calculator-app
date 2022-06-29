@@ -62,9 +62,12 @@ body{
     display:flex;
 }
 .settings{
-    height:50px;
-    width:50px;
+    height:60px;
+    width:60px;
     cursor: pointer;
+}
+.poza-setari{
+    width:100%;
 }
 .poza{
     width:100%;
@@ -140,10 +143,6 @@ body{
     -webkit-app-region: no-drag;
     padding:0;
     margin-bottom:1px;
-}
-.settings-div{
-    width:40px;
-    height: 40px;
 }
 .dark-mode{
     display: none;
