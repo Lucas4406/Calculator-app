@@ -24,6 +24,7 @@
   "build": {
     "appId": "Calculator",
     "win": {
+      "publish": ["github"],
       "target": [
         "nsis"
       ],
