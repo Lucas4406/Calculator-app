@@ -2,7 +2,7 @@ const { app, BrowserWindow, Menu, ipcMain, nativeTheme} = require('electron');
 const path = require('path');
 const { Tray, nativeImage } = require('electron')
 icon = nativeImage.createFromPath(path.join(__dirname, 'icons', 'iconita.ico'));
-process.env.NODE_ENV='production';
+process.env.NODE_ENV='develop';
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
