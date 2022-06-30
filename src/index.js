@@ -1,6 +1,5 @@
 const { app, BrowserWindow, Menu, ipcMain, nativeTheme} = require('electron');
 const path = require('path');
-const url = require('url');
 const { Tray, nativeImage } = require('electron')
 icon = nativeImage.createFromPath(path.join(__dirname, 'icons', 'iconita.ico'));
 process.env.NODE_ENV='production';
@@ -62,7 +61,6 @@ function createPublicWindow(){
   })
 }
 
-
 ipcMain.on("app/close", ()=>{
   app.quit()
 })
@@ -83,9 +81,6 @@ if(process.env.NODE_ENV === 'develop'){
 };
 
 let tray=null
-
-
-
 if(process.env.NODE_ENV === 'develop'){
   app.whenReady().then(() => {
     tray = new Tray(icon)
@@ -101,6 +96,12 @@ if(process.env.NODE_ENV === 'develop'){
         click(){
           mainWindow.webContents.openDevTools();
         }
+      },
+      {
+        label: 'Settings',
+        click(){
+          mainWindow.loadFile(path.join(__dirname, 'settings.html'));
+        }
       }
     ])
     tray.setToolTip('calculator-app')
@@ -114,6 +115,12 @@ if(process.env.NODE_ENV === 'develop'){
         label: 'Quit',
         click(){
           app.quit();
+        }
+      },
+      {
+        label: 'Settings',
+        click(){
+          mainWindow.loadFile(path.join(__dirname, 'settings.html'));
         }
       },
     ])
