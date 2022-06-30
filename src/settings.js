@@ -1,20 +1,17 @@
 const pageText=document.getElementById("text-pagina")
 const body = document.querySelector("body")
 document.getElementById('toggle-dark-mode').addEventListener('click', async()=>{
-    const isDarkMode=await window.darkMode.toggle()
-    document.getElementById('theme-source').innerHTML=isDarkMode ? 'Dark' : 'Light'
-})
-document.getElementById('toggle-dark-mode').addEventListener('click', ()=>{
-    console.log(body.style)
-    if(nativeTheme.shouldUseDarkColors){
-        pageText.innerText='Hello'
+    const isDarkMode=await window.darkMode.toggle();
+    if(isDarkMode){
+        pageText.innerText='You are using: Dark mode'
+        pageText.classList.add("active")
     }
     else{
-        pageText.innerText='bye'
+        pageText.innerText='You are using: Light mode'
+        pageText.classList.remove("active")
     }
-    console.log(document)
-    /* pageText.innerText='' */
 })
+
 const closeBtn = document.getElementById("close-button")
 const minBtn = document.getElementById("minimize-button")
 closeBtn.addEventListener("click" , closeApp)
