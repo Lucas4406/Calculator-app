@@ -2,7 +2,7 @@ const { app, BrowserWindow, Menu, ipcMain, nativeTheme} = require('electron');
 const path = require('path');
 const { Tray, nativeImage } = require('electron')
 icon = nativeImage.createFromPath(path.join(__dirname, 'icons', 'iconita.ico'));
-process.env.NODE_ENV='develop';
+process.env.NODE_ENV='production';
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -18,12 +18,15 @@ function createWindow(){
     height: 800,
     icon: 'src/icons/iconita.ico',
     frame:false,
+    show:false,
     webPreferences:{
       preload: path.join(__dirname, 'backend', 'preload.js'),
     },
   })
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
-
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
+  })
   const mainMenu=Menu.buildFromTemplate(mainMenuTemplate);
   Menu.setApplicationMenu(mainMenu);
   ipcMain.handle('dark-mode:toggle', () => {
@@ -42,13 +45,16 @@ function createPublicWindow(){
     height: 800,
     icon: 'src/icons/iconita.ico',
     frame:false,
+    show:false,
     webPreferences:{
       preload: path.join(__dirname, 'backend', 'preload.js'),
       devTools: false,
     },
   })
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
-
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
+  })
   const mainMenu=Menu.buildFromTemplate(mainMenuTemplate);
   Menu.setApplicationMenu(mainMenu);
   ipcMain.handle('dark-mode:toggle', () => {
@@ -79,6 +85,7 @@ if(process.env.NODE_ENV === 'develop'){
 }else{
   app.on('ready', createPublicWindow);
 };
+
 
 let tray=null
 if(process.env.NODE_ENV === 'develop'){
