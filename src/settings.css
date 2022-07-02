@@ -24,6 +24,8 @@ body{
     height:60px;
     width:60px;
     cursor: pointer;
+    border: none;
+    background: none;
 }
 .poza-calculator{
     width:100%;
@@ -50,6 +52,9 @@ body{
     height:100px;
     width:100px;
     cursor: pointer;
+    background: none;
+    border:solid black 1px;
+    border-radius:5px;
 }
 .reset-btn{
     width:50px;
