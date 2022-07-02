@@ -26,3 +26,16 @@ const homeBtn = document.getElementById("homeButton")
 homeBtn.addEventListener("click", ()=>{
     window.location.assign("index.html")
 })
+
+
+//butoane
+const maxBtn = document.getElementById("maximizeBtn")
+const miniBtn = document.getElementById("minimizeBtn")
+maxBtn.addEventListener("click" , maximizeApp)
+miniBtn.addEventListener("click", unmaximizeApp)
+function maximizeApp(){
+    app.window.maximize()
+}
+function unmaximizeApp(){
+    app.window.unmaximize()
+}
