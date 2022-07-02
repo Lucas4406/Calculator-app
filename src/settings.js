@@ -1,6 +1,15 @@
+const pageText=document.getElementById("text-pagina")
+const body = document.querySelector("body")
 document.getElementById('toggle-dark-mode').addEventListener('click', async()=>{
-    const isDarkMode=await window.darkMode.toggle()
-    document.getElementById('theme-source').innerHTML=isDarkMode ? 'Dark' : 'Light'
+    const isDarkMode=await window.darkMode.toggle();
+    if(isDarkMode){
+        pageText.innerText='You are using: Dark mode'
+        pageText.classList.add("active")
+    }
+    else{
+        pageText.innerText='You are using: Light mode'
+        pageText.classList.remove("active")
+    }
 })
 
 const closeBtn = document.getElementById("close-button")

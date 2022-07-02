@@ -6,7 +6,6 @@
 body{
     padding:0;
     margin:0;
-    /* background:linear-gradient(to right, #00AAFF, #00FF6C); */
     overflow:hidden;
 }
 .title-bar{
@@ -22,9 +21,12 @@ body{
     display:flex;
 }
 .settings{
-    height:50px;
-    width:50px;
+    height:60px;
+    width:60px;
     cursor: pointer;
+}
+.poza-calculator{
+    width:100%;
 }
 .poza{
     width:100%;
@@ -101,18 +103,25 @@ body{
     padding:0;
     margin-bottom:1px;
 }
-.settings-div{
-    width:40px;
-    height: 40px;
-}
-
-.dmBtn{
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
-
+.text-pagina{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    top:0;
+}
+.text-pagina.active{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    top:0;
+}
 @media (prefers-color-scheme: light) {
     body { 
         background: linear-gradient(to right, #00AAFF, #00FF6C); 
