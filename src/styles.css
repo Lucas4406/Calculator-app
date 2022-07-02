@@ -67,6 +67,8 @@ body{
     height:60px;
     width:60px;
     cursor: pointer;
+    border: none;
+    background: none;
 }
 .poza-setari{
     width:100%;
