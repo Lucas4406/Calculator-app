@@ -54,6 +54,7 @@ body{
     cursor: pointer;
     background: none;
     border:solid black 1px;
+    background-color: white;
     border-radius:5px;
 }
 .reset-btn{
