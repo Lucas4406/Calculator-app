@@ -27,8 +27,6 @@ function createWindow(){
   mainWindow.once('ready-to-show', () => {
     mainWindow.show()
   })
-  const mainMenu=Menu.buildFromTemplate(mainMenuTemplate);
-  Menu.setApplicationMenu(mainMenu);
   ipcMain.handle('dark-mode:toggle', () => {
     if (nativeTheme.shouldUseDarkColors) {
       nativeTheme.themeSource = 'light'
@@ -55,8 +53,6 @@ function createPublicWindow(){
   mainWindow.once('ready-to-show', () => {
     mainWindow.show()
   })
-  const mainMenu=Menu.buildFromTemplate(mainMenuTemplate);
-  Menu.setApplicationMenu(mainMenu);
   ipcMain.handle('dark-mode:toggle', () => {
     if (nativeTheme.shouldUseDarkColors) {
       nativeTheme.themeSource = 'light'
@@ -79,6 +75,8 @@ ipcMain.on("app/maximize", ()=>{
 ipcMain.on("app/unmaximize", ()=>{
   mainWindow.unmaximize()
 })
+
+app.setUserTasks([])
 
 
 
@@ -174,43 +172,3 @@ app.setUserTasks([
     description: 'Create a new window'
   }
 ])
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.
-
-const mainMenuTemplate=[
-  {
-    label:'File',
-    submenu:[
-      {
-        label: 'Color mode',
-        accelerator: process.platform=='darwin' ? 'Command+G' : 'Ctrl+G',
-        click(){
-          backgroundColor();
-        }
-      },
-      {
-        label:'Quit',
-        accelerator: process.platform=='darwin' ? 'Command+Q' : 'Ctrl+Q',
-        click(){
-          app.quit();
-        }
-      }
-    ]
-  }
-];
-
-if(process.env.NODE_ENV !== 'production'){
-  mainMenuTemplate.push({
-    label: 'Developer Tools',
-    submenu:[
-      {
-        label: 'Toggle DevTools',
-        accelerator: process.platform=='darwin' ? 'Command+I' : 'Ctrl+I',
-        click(item, focusedWindow){
-          focusedWindow.toggleDevTools();
-        }
-      }
-    ]
-  })
-};
